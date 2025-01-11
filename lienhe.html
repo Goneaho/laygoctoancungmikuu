@@ -86,10 +86,34 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success me-2 p-1" type="submit">Tìm kiếm</button>
-            </form>
+            <form class="d-flex" id="searchForm">
+                <input class="form-control me-2" type="search" placeholder="Nhập từ khóa..." id="searchInput" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Tìm kiếm</button>
+              </form>
+              <script>
+                document.getElementById('searchForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+              
+                
+                const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+              
+                
+                const pages = {
+                  'giải tích': 'giaiTich.html',
+                  'hình học': 'hinhHoc.html',
+                  'số học': 'soHoc.html',
+                  'toán thực tế': 'toanThucte.html',
+                  'trang chủ': 'index.html'
+                };
+              
+               
+                if (pages[keyword]) {
+                  window.location.href = pages[keyword]; 
+                } else {
+                  alert('Không tìm thấy kết quả phù hợp!'); 
+                }
+              });
+              </script>
             <div class="navbar-nav mb-2 mb-lg-0">
                 <div class="border-success btn btn-outline-success me-2 p-2">
                     <a class="nav-link active" aria-current="page" href="register.html">Đăng kí</a>
