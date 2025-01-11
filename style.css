@@ -22,3 +22,29 @@
   ion-icon {
     color: black;
   }
+  /* Reset margin và padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Căn chỉnh ảnh ở trung tâm phía trên */
+.center-top-image {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: flex-start; /* Căn phía trên */
+  position: relative;
+  margin-top: 20px; /* Cách phía trên một khoảng */
+}
+
+.liogo-img {
+  max-width: 150px; /* Đặt kích thước tối đa cho ảnh */
+  height: auto; /* Giữ tỉ lệ gốc của ảnh */
+}
+
+/* Định dạng nội dung trang */
+.content {
+  text-align: center;
+  padding: 50px 20px;
+}
