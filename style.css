@@ -39,7 +39,7 @@ body {
 }
 
 .liogo-img {
-  max-width: 150px; /* Đặt kích thước tối đa cho ảnh */
+  max-width: 800px; /* Đặt kích thước tối đa cho ảnh */
   height: auto; /* Giữ tỉ lệ gốc của ảnh */
 }
 
